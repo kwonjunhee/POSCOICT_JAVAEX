@@ -7,7 +7,19 @@ public class OperatorEx {
 //		prefixIncrEx();
 //		suffixIncrEx();
 //		logicalOperEx();
-		bitOperEx();
+//		bitOperEx();
+		bitShiftOperEx();
+	}
+	//	비트시프트
+	private static void bitShiftOperEx() {
+		int val = 1;
+		
+		System.out.println(Integer.toBinaryString(val));
+		System.out.println(Integer.toBinaryString(val << 3));
+		
+		val = 0b1000;
+		System.out.println(Integer.toBinaryString(val));
+		System.out.println(Integer.toBinaryString(val >> 2));	//	2비트 우측 시프트
 	}
 	//	비트연산자
 	private static void bitOperEx() {
@@ -18,6 +30,10 @@ public class OperatorEx {
 		
 		System.out.println(Integer.toBinaryString(b1));
 		System.out.println(Integer.toBinaryString(mask));
+		
+		System.out.println(Integer.toBinaryString(b1 & mask));	//	비트 논리곱
+		System.out.println(Integer.toBinaryString(b1 | mask));	//	비트 논리합 
+		System.out.println(Integer.toBinaryString(~b1));	//	비트 논리부정
 		
 	}
 	
