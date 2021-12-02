@@ -3,7 +3,71 @@ package com.javaex.basic;
 public class OperatorEx {
 
 	public static void main(String[] args) {
-		arithOperEx();
+//		arithOperEx();
+//		prefixIncrEx();
+//		suffixIncrEx();
+//		logicalOperEx();
+		bitOperEx();
+	}
+	//	비트연산자
+	private static void bitOperEx() {
+		//	int에서만
+		//	비트 단위의 미세한 제어에 이용
+		int b1 = 0b11011101;
+		int mask = 0b10101010;
+		
+		System.out.println(Integer.toBinaryString(b1));
+		System.out.println(Integer.toBinaryString(mask));
+		
+	}
+	
+	//	비교, 논리연산
+	private static void logicalOperEx() {
+		//	비교연산자: >, >=, <, <=, ==(equal), !=(not equal)
+		//	논리연산자: 논리곱(AND, &&), 논리합(OR, ||), 논리부정(NOT, !)
+		int a = 5;
+		//	a가 0초과, 10미만의 값?
+		//	조건1: a > 0
+		//	조건2: a < 10
+		//	결과 : 조건1 AND 조건2
+		boolean b1 = a > 0;	//	true
+		boolean b2 = a < 10;	//	true
+		
+		boolean r = b1 && b2;	//	논리곱
+		System.out.println("b1 && b2 == " + r);
+		
+		//	a가 10이하 이거나 10이상의 값?
+		//	조건1: a <= 0
+		//	조건2: a >= 10
+		b1 = a <= 0;
+		b2 = a >= 10;
+		
+		r = b1 || b2;
+		System.out.println("b1 || b2 == " + r);
+		
+		//	논리 부정(NOT !)
+		System.out.println("!r == " + !r);
+		
+	}
+	
+	//	후위증감
+	private static void suffixIncrEx() {
+		int a = 7;
+		int b = 0;
+		
+		b = a++;
+		System.out.println("b:" + b);
+		System.out.println("a:" + a);
+	}
+	
+	//	전위증감
+	private static void prefixIncrEx() {
+		int a = 7;
+		int b = 0;
+		
+		b = ++a;
+		System.out.println("b:" + b);
+		System.out.println("a:" + a);
 	}
 	
 	//	산술연산자
